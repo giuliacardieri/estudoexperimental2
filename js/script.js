@@ -120,13 +120,13 @@ $(function() {
 		if (participant.group === 'A')
 			$('.main__section--part1-task1').removeClass('main__section--hidden');
 		else
-			$('.main__section--part0').removeClass('main__section--hidden');
+			$('.main__section--part0-task1').removeClass('main__section--hidden');
 	});
 
 	$('.button-wrapper__button--nexttask').on('click', function() {
 		submitSAMValues($(this).data('part'), $(this).data('task'));
 		if ($(this).data('part') === 0) {
-			$('.main__section--part0').addClass('main__section--hidden');
+			$('.main__section--part0-task1').addClass('main__section--hidden');
 			$('.main__section--part1-task1').removeClass('main__section--hidden');
 		} else if (($(this).data('task') === 1) && ($(this).data('part') === 1)) {
 			$('.main__section--part1-task1').addClass('main__section--hidden');
