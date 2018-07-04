@@ -1,0 +1,22 @@
+.button-wrapper__button {
+	background-color: $light-purple;
+	border-radius: 10px;
+	color: white;
+	font-size: 20px;
+	padding: 10px 50px;
+	margin: 0 0 10px 0;
+	&:hover {
+		background-color: $purple;
+	}
+	&:disabled {
+		background-color: $grey;
+		color: $black;
+		&:hover {
+			background-color: $grey;
+		}
+	}
+}
+
+.button-wrapper__a--back {
+	text-align: left;
+}

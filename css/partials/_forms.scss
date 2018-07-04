@@ -1,0 +1,15 @@
+.input-group__input {
+	border: 1px solid $black;
+	border-radius: 10px;
+	padding: 5px;
+	&:focus {
+		outline: 0;
+	}
+	&.error {
+		border: 2px solid $red;
+	}
+}
+
+.input-group__range {
+	width: 80%;
+}
