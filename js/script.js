@@ -145,6 +145,30 @@ $(function() {
 		window.scrollTo(0, 0);
 	});
 
+	$('.button-wrapper__button--previoustask').on('click', function() {
+		let participant = getParticipant();
+		if ($(this).data('part') === 0) {
+			$('.main__section--part0-task1').addClass('main__section--hidden');
+			$('.main__section--grupo').removeClass('main__section--hidden');
+		} else if (($(this).data('task') === 1) && ($(this).data('part') === 1) && (participant.group === 'B')) {
+			$('.main__section--part1-task1').addClass('main__section--hidden');
+			$('.main__section--part0-task1').removeClass('main__section--hidden');
+		} else if (($(this).data('task') === 1) && ($(this).data('part') === 1) && (participant.group === 'A')) {
+			$('.main__section--part1-task1').addClass('main__section--hidden');
+			$('.main__section--grupo').removeClass('main__section--hidden');
+		} else if (($(this).data('task') === 2) && ($(this).data('part') === 1)) {
+			$('.main__section--part1-task2').addClass('main__section--hidden');
+			$('.main__section--part1-task1').removeClass('main__section--hidden');
+		} else if (($(this).data('task') === 1) && ($(this).data('part') === 2)) {
+			$('.main__section--part2-task1').addClass('main__section--hidden');
+			$('.main__section--part1-task2').removeClass('main__section--hidden');
+		} else if (($(this).data('task') === 2) && ($(this).data('part') === 2)) {
+			$('.main__section--part2-task2').addClass('main__section--hidden');
+			$('.main__section--part2-task1').removeClass('main__section--hidden');
+			addFinishedParticipant();
+		}
+		window.scrollTo(0, 0);
+	});
 
 
 });
